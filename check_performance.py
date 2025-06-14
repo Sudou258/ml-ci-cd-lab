@@ -1,7 +1,11 @@
 import subprocess
 import sys
 
-result = subprocess.run(["python", "evaluate.py"], capture_output=True, text=True)
+result = subprocess.run(
+    ["python", "evaluate.py"],
+    capture_output=True,
+    text=True
+)
 print(result.stdout)
 
 for line in result.stdout.splitlines():
